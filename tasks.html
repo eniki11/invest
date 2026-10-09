@@ -9,25 +9,70 @@
         console.log('Hello world!');
     </script>
     <style>
+        :root{
+            --main-color:#f5e1ea;
+            --h-color:white;
+            --h-background:rgb(80, 19, 67);
+        }
     body {
-        color: #c5235e;
-        background: #272822; 
+        background: var(--main-color);
     }
-    </style>    
-<h1>Моя первая страница</h1> 
+    .section-header{
+        background: var(--h-background);
+        color:var(--h-color);
+    }
+    .title-header{
+        color:var(--h-background);
+        background: var(--h-color);
+    }
+    .bold{font-weight:900;}
+    .italic{font-style:italic;}
+    .strike{text-decoration: line-through;}
+    .section-card{
+        border: 1px solid black;
+        border-radius: lrem 0;
+        box-shadow: 0px 4px 20px rgba(109, 74, 74, 0.267);
+        margin-bottom: 2rem;
+    }
+    .section-card:hover{
+        box-shadow: 0px 12px 35px rgba(168, 96, 96, 0.06);
+        transform: translateY(-4px);
+    }
+    .section-header{
+        background: var(--h-background);
+        color: var(--h-color);
+        font-weight: 800;
+        font-size: 1.15rem;
+        padding: lrem 1.15 rem;
+    }
+    .title-header{
+        color: var(--h-background);
+        background: var(--h-color);
+        padding: 1.5rem;
+        margin: 2.5rem 0;
+        text-align: center;
+        border: 1px solid #e9ecef;
+    }
 
-<section>
-    <h2>Мячик</h2>
+    </style>
+</head>
+<body>    
+    <section class="title-header">
+        <h1>Моя первая страница</h1>
+    </section> 
+
+<section class="section-card">
+    <h2 class="section-header">Мячик</h2>
     <div id="ball"></div>
-    <b>Наша Таня громко плачет:</b><br>
-    <i>Уронила в речку мячик.</i><br>
-    <span>-Тише, Танечка, не плачь:</span><br>
-    <strike>Не утонет в речке мяч.</strike><br>
-    <b><i>Автор: А. Л. Барто</i></b>
+        <span class="bold">Наша Таня громко плачет:</span><br>
+        <span class="italic">Уронила в речку мячик.</span><br>
+        <span>-Тише, Танечка, не плачь:</span><br>
+        <span class="strike">Не утонет в речке мяч.</span><br>
+        <span class="bold italic">Автор: А. Л. Барто</span>
 </section>
 
-<section>
-    <h2>Расписание звонков</h2>
+<section class="section-card">
+    <h2 class="section-header">Расписание звонков</h2>
     <div id="timetable">
     </div>
     <ol>
@@ -48,8 +93,8 @@
     </ol>
 </section>
 
-<section>
-    <h2>Расписание пар</h2>
+<section class="section-card">
+    <h2 class="section-header">Расписание пар</h2>
     <div id="shedule">
         <table>
             <thead>
@@ -77,22 +122,34 @@
                     <td>217/4к</td>
                     <td>Деев О.А.</td>
                 </tr>
+            </tbody>
+        </table>
     </div>
 </section>
 
-<section>
-    <h2>Весёлые картинки</h2>
-    <div id="memes">
+<section class="section-card">
+    <h2 class="section-header">Весёлые картинки</h2>
+    <div id="memes" class="row">
+        <div class="col-6">
+            <img src="img/1.jpg" alt="опаа" height="400px">
+        </div>
+        <div class="col-6">
+            <img src="img/2.jpg" alt="зайка" height="400px">
+        </div>
+        <div class="col-6">
+            <img src="img/3.jpg" alt="кот" height="400px">
+        </div>
+        <div class="col-6">
+            <img src="img/4.jpg" alt="баронесса де синяк" height="400px">
+        </div>
+        <div class="col-6">
+            <img src="img/5.jpg" alt="могнуть хочу" height="400px">
+        </div>
     </div>
-    <img src="img/1.jpg" alt="опаа">
-    <img src="img/2.jpg" alt="зайка">
-    <img src="img/3.jpg" alt="кот">
-    <img src="img/4.jpg" alt="баронесса де синяк">
-    <img src="img/5.jpg" alt="могнуть хочу">
 </section>
 
-<section>
-    <h2>Дневник</h2>
+<section class="section-card">
+    <h2 class="section-header">Дневник</h2>
     <div id="diary">
         <form>
             <div>
@@ -145,19 +202,18 @@
     </div>
 </section>
 
-<section>
-    <h2>Бухгалтерия</h2>
+<section class="section-card">
+    <h2 class="section-header">Бухгалтерия</h2>
     <div id="accounting">
     </div>
 </section>
 
-<section>
-    <h2>Производные</h2>
+<section class="section-card">
+    <h2 class="section-header">Производные</h2>
     <div id="derivatives">
     </div>
 </section>
-</head>
-<body>
-    
+
+
 </body>
 </html>
