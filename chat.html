@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Инвестиции</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/sky.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Инвестиции</h1>
+				</section>
+				<section>
+					<h2>Определения</h2>
+				</section>
+				<section data-markdown="markdown/invest.md"></section>
+				<section data-markdown="markdown/trading.md"></section>
+				<section data-markdown="markdown/market.md"></section>
+				<section data-markdown="markdown/exchange.md"></section>
+				<section data-markdown="markdown/security_paper.md"></section>
+				<section data-markdown="markdown/investment_portfolio.md"></section>
+				<section data-markdown="markdown/diversification.md"></section>
+				<section data-markdown="markdown/bull_and_bear.md"></section>
+				<section data-markdown="markdown/bull.md"></section>
+				<section data-markdown="markdown/bear.md"></section>
+				<section data-markdown="markdown/flat.md"></section>
+				<section data-markdown="markdown/spread.md"></section>
+				<section>
+					<h2>Доходность портфеля</h2>
+				</section>
+				<section data-markdown="markdown/rate_of_return.md"></section>
+				<section data-fullscreen data-menu-title="Расчет доходности">
+					<iframe src="html/rate_of_return.html" frameborder="0" class="stretch"></iframe>
+				</section>
+				<section>
+					<h2>Графики инвестиций</h2>
+				</section>
+				<section data-markdown="markdown/line.md"></section>
+				<section data-fullscreen data-menu-title="Линейный график">
+					<iframe src="html/line.html" frameborder="0" class="stretch"></iframe>
+				</section>
+				<section data-markdown="markdown/candlestick.md"></section>
+				<section data-fullscreen data-menu-title="Свечной график">
+					<iframe src="html/candlestick.html" frameborder="0" class="stretch"></iframe>
+				</section>
+				<section>
+					<h2>Весёлые картинки</h2>
+				</section>
+				<section data-background-image="img/f0f10bb7a8.jpg" data-menu-title="Горизонатальная высокого разрешения"></section>
+				<section data-background-image="img/vertical.jpg" data-background-size="contain" data-menu-title="Вертикальная"></section>
+				<section>
+					<img src="img/mini.avif" alt="Купи мёда">
+				</section>
+				<section>Спасибо за внимание!</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
