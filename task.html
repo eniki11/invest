@@ -427,7 +427,37 @@
         window.onload = () => {
             let tableNode = document.querySelector("#accountancy");
             tableNode.insertAdjacentHTML('beforeend', table);
+
         }
+        const funcs=[
+            'const',
+            'x',
+            'x^n',
+            'sqrt(x)',
+            'a^x',
+            'e^x',
+            'log(x)',
+            'log(x,a)',
+            'sin(x)',
+            'asin(x)',
+            'cos(x)',
+            'acos(x)',
+            'tan(x)',
+            'atan(x)',
+
+        ];
+        let tableD='<table><thead>';
+        tableD+='<tr><th>Функция</th><th>Производная</th><tr></thead><tbody>';
+        let tableDNodeD=document.querySelector('derivatives');
+        for(let func of funcs){
+            tableD+='<tr>';
+            tableD+='<td>'+katex.renderToString(math.parse(func).toTex())+'</td>';
+            tableD+='<td>'+katex.renderToString(math.derivative(func,'x').toTex())+'</td>';
+            tableD+='</tr>';
+        }
+        tableD+='</tbody></table>';
+        let tableNodeD=document.querySelector('#derivatives');
+        tableNodeD.insertAdjacentHTML('beforeend',tableD);
     </script>
 </body>
 </html>
